@@ -1,4 +1,5 @@
 FROM centos:7
+LABEL maintainer="lifcn@yahoo.com"
 
 # activate systemd
 
