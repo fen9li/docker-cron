@@ -1,5 +1,5 @@
 # docker-cron
-Dockerize Cron Job
+Dockerize Cron Job and integrate deadmansnitch to alert should the cron job failed. 
 
 ## Clone this repo
 
