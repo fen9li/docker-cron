@@ -19,8 +19,10 @@ VOLUME [ "/sys/fs/cgroup" ]
 #CMD ["/usr/bin/bash"]
 
 RUN yum -y update; yum -y install cronie
-ADD crontab /etc/cron.d/hello-cron
-RUN chmod 0644 /etc/cron.d/hello-cron
+ADD crontab /etc/cron.d/c1-cron
+RUN chmod 0644 /etc/cron.d/c1-cron
+ADD c1-cron.sh /root/c1-cron.sh
+RUN chmod +x /root/c1-cron.sh
 
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
