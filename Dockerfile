@@ -26,4 +26,4 @@ RUN chmod +x /root/c1-cron.sh
 
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
-CMD /usr/sbin/crond && tail -f /var/log/cron.log
+ENTRYPOINT [ "/usr/sbin/crond","-n" ]
